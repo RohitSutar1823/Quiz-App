@@ -45,3 +45,8 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+.container .index{
+    margin: auto;
+    font-size: 18px ;
+}
