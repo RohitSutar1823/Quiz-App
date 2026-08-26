@@ -11,12 +11,12 @@ const Quiz = () => {
     <div className='container'>
       <h1>Quiz App</h1>
       <hr />
-      <h2>1. Which device is requied for Internet Connection</h2>
+      <h2>{index+1}. {Question.question}</h2>
       <ul>
-        <li>Modem</li>
-        <li>Router</li>
-        <li>Lan cable</li>
-        <li>Pen drive</li>
+        <li>{Question.option1}</li>
+        <li>{Question.option2}</li>
+        <li>{Question.option3}</li>
+        <li>{Question.option4}</li>
       </ul>
       <button>Next</button>
       <div className="index">1 of 5 questions</div>
