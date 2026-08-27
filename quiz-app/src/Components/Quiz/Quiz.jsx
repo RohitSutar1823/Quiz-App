@@ -5,9 +5,10 @@ import { useRef } from 'react';
 
 const Quiz = () => {
 
-  const [index, setIndex] = useState(0);
+  let [index, setIndex] = useState(0);
   const [Question, setQuestion] = useState(data[index]);
   const [Lock, setLock] = useState(false);
+  const [score, setscore] = useState(0);
 
   const option1 = useRef(null);
   const option2 = useRef(null);
@@ -17,10 +18,11 @@ const Quiz = () => {
   let option_array = [option1,option2,option3,option4];
 
 
-  const checkAns = (e, ans) => {
+  const checkAns = (e, ans) => { 
     if (Lock === false) {
       if (Question.ans == ans) {
         e.target.classList.add("correct");
+        setscore(prev=>prev+1);
       }
       else {
         e.target.classList.add("wrong");
@@ -29,6 +31,19 @@ const Quiz = () => {
       setLock(true);
     }
 
+  }
+
+  const next = () => {
+    if(Lock === true){
+      setIndex(++index);
+      setQuestion(data[index]);
+      setLock(false);
+      option_array.map((option)=>{
+        option.current.classList.remove("wrong");
+        option.current.classList.remove("correct");
+        return null;
+      })
+    }
   }
 
   return (
@@ -42,10 +57,10 @@ const Quiz = () => {
         <li ref={option3} onClick={(e) => checkAns(e, 3)}>{Question.option3}</li>
         <li ref={option4} onClick={(e) => checkAns(e, 4)}>{Question.option4}</li>
       </ul>
-      <button>Next</button>
-      <div className="index">1 of 5 questions</div>
+      <button onClick={next}>Next</button>
+      <div className="index">{index+1} of {data.length} questions</div>
     </div>
   )
 }
 
-export default Quiz
+export default Quiz;
