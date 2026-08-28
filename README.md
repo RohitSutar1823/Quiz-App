@@ -113,21 +113,6 @@ http://localhost:5173
 
 ---
 
-## 🚀 Future Improvements
-
-- ⏳ Timer for each question
-- 📊 Progress Bar
-- 🌙 Dark Mode
-- 🎵 Sound Effects
-- 🏆 High Score using Local Storage
-- 🎉 Confetti Animation
-- 🔀 Shuffle Questions
-- 🔀 Shuffle Options
-- 📚 Multiple Quiz Categories
-- 🎯 Difficulty Levels
-
----
-
 ## 📱 Responsive Design
 
 ✔️ Desktop  
