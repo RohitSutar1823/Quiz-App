@@ -16,11 +16,11 @@ export const data = [
     ans: 3,
   },
   {
-    question: "React is primarily used for?",
-    option1: "Building User Interfaces (UI)",
-    option2: "Managing SQL Databases",
-    option3: "Creating Operating Systems",
-    option4: "Configuring Cloud Servers",
+    question: "In web development, what is React primarily used for building?",
+    option1: "User Interfaces (UI)",
+    option2: "Relational Databases",
+    option3: "Operating Systems",
+    option4: "Cloud Server Networks",
     ans: 1,
   },
   {
