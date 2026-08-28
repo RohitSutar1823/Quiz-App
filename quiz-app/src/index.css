@@ -4,21 +4,8 @@
     box-sizing: border-box;
 }
 
-html{
-    font-size:16px;
-}
-
 body{
-    min-height:100vh;
-    background:linear-gradient(#DBC7FF,#19006C);
-    font-family:"Poppins",sans-serif;
-    overflow-x:hidden;
-}
-
-button{
-    font-family:inherit;
-}
-
-ul{
-    list-style:none;
+    min-height: 100vh;
+    background-image: linear-gradient(#DBC7FF,#19006C);
+    font-family: 'Poppins', sans-serif;
 }
